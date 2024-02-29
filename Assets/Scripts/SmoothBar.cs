@@ -2,7 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class SmoothBar : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private Image _bar;
