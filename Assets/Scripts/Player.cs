@@ -19,19 +19,19 @@ public class Player : MonoBehaviour
 
     public void Heal()
     {
-        _health = Mathf.Clamp(_health + _healValue, _minHealth, _maxHealth);
+        _health = Mathf.Min(_health + _healValue, _maxHealth);
         ChangeHealth?.Invoke(_health, _maxHealth);
     }
 
     public void TakeDamage()
     {
-        _health = Mathf.Clamp(_health - _damageValue, _minHealth, _maxHealth);
+        _health = Mathf.Max(_health - _damageValue, _minHealth);
         ChangeHealth?.Invoke(_health, _maxHealth);
     }
 
     public void SetRandomValue()
     {
-        _health = Mathf.Clamp(Random.Range(_minHealth, _maxHealth), _minHealth, _maxHealth);
+        _health = Random.Range(_minHealth, _maxHealth);
         ChangeHealth?.Invoke(_health, _maxHealth);
     }
 }

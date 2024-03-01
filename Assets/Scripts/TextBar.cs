@@ -7,6 +7,6 @@ public class TextBar : Bar
 
     protected override void OnChangeHealth(float currentValue, float maxValue)
     {
-        _text.text = $"{(int)currentValue} / {(int)maxValue}";
+        _text.text = $"{Mathf.Round(currentValue)} / {Mathf.Round(maxValue)}";
     }
 }

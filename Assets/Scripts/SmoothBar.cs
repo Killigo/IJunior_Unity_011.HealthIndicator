@@ -15,6 +15,6 @@ public class SmoothBar : Bar
         float value = currentValue / maxValue;
         _bar.DOFillAmount(value, _duration);
         _bar.color = _gradientBar.Evaluate(value);
-        _text.text = $"{(int)currentValue} / {(int)maxValue}";
+        _text.text = $"{Mathf.Round(currentValue)} / {Mathf.Round(maxValue)}";
     }
 }
