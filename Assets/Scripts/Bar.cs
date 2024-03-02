@@ -6,13 +6,13 @@ public abstract class Bar : MonoBehaviour
 
     private void OnEnable()
     {
-        _player.ChangeHealth += OnChangeHealth;
+        _player.HealthChanged += OnHealthChanged;
     }
 
     private void OnDisable()
     {
-        _player.ChangeHealth -= OnChangeHealth;
+        _player.HealthChanged -= OnHealthChanged;
     }
 
-    protected abstract void OnChangeHealth(float currentValue, float maxValue);
+    protected abstract void OnHealthChanged(float currentValue, float maxValue);
 }

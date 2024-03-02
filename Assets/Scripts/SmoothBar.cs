@@ -10,7 +10,7 @@ public class SmoothBar : Bar
 
     private readonly float _duration = 0.7f;
 
-    protected override void OnChangeHealth(float currentValue, float maxValue)
+    protected override void OnHealthChanged(float currentValue, float maxValue)
     {
         float value = currentValue / maxValue;
         _bar.DOFillAmount(value, _duration);
